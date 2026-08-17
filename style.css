@@ -169,7 +169,7 @@ main {
   border: 1px solid var(--border-color);
   display: block;
 }
-video{
+video {
   width: 100%;
   height: auto;
   border-radius: 4px;
