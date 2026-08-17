@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diário de Bordo: Robótica, Física e Tecnociência</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Atalho de acessibilidade para leitores de tela -->
@@ -38,16 +40,21 @@
     <section aria-labelledby="intro-heading" class="intro-section">
       <h2 id="intro-heading">Introdução e Objetivo Geral</h2>
       <p>
-        Este diário de bordo documenta a jornada de investigação prática e teórica em Robótica, Física e Tecnociência, explorando a criação de protótipos interativos e soluções baseadas em tecnologia.
+        Este diário de bordo documenta a jornada de investigação prática e teórica em Robótica, Física e Tecnociência,
+        explorando a criação de protótipos interativos e soluções baseadas em tecnologia.
       </p>
 
       <article class="reflection-box">
         <h3>Tecnologia, IA e a Visão Humana</h3>
         <p>
-          <strong>Como a ciência, a tecnologia e a inteligência artificial podem contribuir para a melhoria da visão humana e para a acessibilidade visual?</strong>
+          <strong>Como a ciência, a tecnologia e a inteligência artificial podem contribuir para a melhoria da visão
+            humana e para a acessibilidade visual?</strong>
         </p>
         <p>
-          A interseção entre física óptica, eletrônica e IA permite a criação de próteses visuais (como retinas artificiais), sistemas de computação gráfica voltados à ampliação adaptativa de contraste em tempo real e algoritmos de visão computacional capazes de descrever o ambiente e textos para pessoas com deficiência visual severa ou cegueira.
+          A interseção entre física óptica, eletrônica e IA permite a criação de próteses visuais (como retinas
+          artificiais), sistemas de computação gráfica voltados à ampliação adaptativa de contraste em tempo real e
+          algoritmos de visão computacional capazes de descrever o ambiente e textos para pessoas com deficiência visual
+          severa ou cegueira.
         </p>
       </article>
     </section>
@@ -61,8 +68,9 @@
         <!-- Card 1: Disco de Newton -->
         <article class="project-card">
           <h3>1. Disco de Newton</h3>
-          <p class="project-objective"><strong>Objetivo:</strong> Demonstrar a decomposição e a síntese da luz branca através da rotação de cores primárias e secundárias.</p>
-          
+          <p class="project-objective"><strong>Objetivo:</strong> Demonstrar a decomposição e a síntese da luz branca
+            através da rotação de cores primárias e secundárias.</p>
+
           <div class="project-components">
             <h4>Componentes Utilizados:</h4>
             <ul>
@@ -74,13 +82,15 @@
           </div>
 
           <div class="project-media">
-            <img src="disco-newton.jpg" alt="Disco com divisões coloridas do espectro visível acoplado a um pequeno motor elétrico sobre uma bancada.">
+            <img src="disco-newton.jpg"
+              alt="Disco com divisões coloridas do espectro visível acoplado a um pequeno motor elétrico sobre uma bancada.">
           </div>
 
           <div class="project-troubleshooting">
             <h4>Erros e Soluções:</h4>
             <p><strong>Erro:</strong> O disco trepidava excessivamente e a mistura de cores não ficava homogênea.</p>
-            <p><strong>Solução:</strong> Rebalanceamos o centro de massa do disco de papelão rígido e fixamos o eixo do motor com silicone denso.</p>
+            <p><strong>Solução:</strong> Rebalanceamos o centro de massa do disco de papelão rígido e fixamos o eixo do
+              motor com silicone denso.</p>
           </div>
 
           <div class="project-code">
@@ -91,15 +101,18 @@
 
           <div class="project-accessibility">
             <h4>Ideia de Protótipo Acessível:</h4>
-            <p>Adição de um sensor de velocidade (encoder) acoplado a um buzzer que emite um tom sonoro contínuo cuja frequência varia conforme a velocidade de rotação, permitindo que estudantes cego(a)s percebam auditivamente a aceleração do disco.</p>
+            <p>Adição de um sensor de velocidade (encoder) acoplado a um buzzer que emite um tom sonoro contínuo cuja
+              frequência varia conforme a velocidade de rotação, permitindo que estudantes cego(a)s percebam
+              auditivamente a aceleração do disco.</p>
           </div>
         </article>
 
         <!-- Card 2: LED Fade-in / Fade-out -->
         <article class="project-card">
           <h3>2. LED Fade-in / Fade-out</h3>
-          <p class="project-objective"><strong>Objetivo:</strong> Controlar a intensidade luminosa de um LED gradualmente utilizando sinal PWM (Pulse Width Modulation).</p>
-          
+          <p class="project-objective"><strong>Objetivo:</strong> Controlar a intensidade luminosa de um LED
+            gradualmente utilizando sinal PWM (Pulse Width Modulation).</p>
+
           <div class="project-components">
             <h4>Componentes Utilizados:</h4>
             <ul>
@@ -111,13 +124,15 @@
           </div>
 
           <div class="project-media">
-            <img src="led-fade.jpg" alt="Protoboard conectada a um Arduino Uno com um LED vermelho aceso com brilho suave.">
+            <img src="led-fade.jpg"
+              alt="Protoboard conectada a um Arduino Uno com um LED vermelho aceso com brilho suave.">
           </div>
 
           <div class="project-troubleshooting">
             <h4>Erros e Soluções:</h4>
             <p><strong>Erro:</strong> O LED ligava e desligava abruptamente em vez de variar suavemente.</p>
-            <p><strong>Solução:</strong> O pino de saída foi alterado de um pino digital comum para um pino compatível com PWM (pino 9 com o símbolo ~).</p>
+            <p><strong>Solução:</strong> O pino de saída foi alterado de um pino digital comum para um pino compatível
+              com PWM (pino 9 com o símbolo ~).</p>
           </div>
 
           <div class="project-code">
@@ -140,15 +155,18 @@ void loop() {
 
           <div class="project-accessibility">
             <h4>Ideia de Protótipo Acessível:</h4>
-            <p>Sincronização do sinal PWM com um vibrador de celular (micro motor de tique haptic), permitindo que pessoas com deficiência visual e auditiva sintam a gradação da potência através da intensidade do estímulo tátil.</p>
+            <p>Sincronização do sinal PWM com um vibrador de celular (micro motor de tique haptic), permitindo que
+              pessoas com deficiência visual e auditiva sintam a gradação da potência através da intensidade do estímulo
+              tátil.</p>
           </div>
         </article>
 
         <!-- Card 3: LED RGB -->
         <article class="project-card">
           <h3>3. LED RGB</h3>
-          <p class="project-objective"><strong>Objetivo:</strong> Misturar as três cores primárias da luz (Vermelho, Verde e Azul) para sintetizar cores secundárias e terciárias.</p>
-          
+          <p class="project-objective"><strong>Objetivo:</strong> Misturar as três cores primárias da luz (Vermelho,
+            Verde e Azul) para sintetizar cores secundárias e terciárias.</p>
+
           <div class="project-components">
             <h4>Componentes Utilizados:</h4>
             <ul>
@@ -160,13 +178,15 @@ void loop() {
           </div>
 
           <div class="project-media">
-            <img src="https://cdn.awsli.com.br/600x450/710/710156/produto/96408357/0e2100fd02.jpg" alt="LED RGB aceso em tom ciano montado na protoboard ao lado de três potenciômetros de controle.">
+            <img src="https://cdn.awsli.com.br/600x450/710/710156/produto/96408357/0e2100fd02.jpg"
+              alt="LED RGB aceso em tom ciano montado na protoboard ao lado de três potenciômetros de controle.">
           </div>
 
           <div class="project-troubleshooting">
             <h4>Erros e Soluções:</h4>
             <p><strong>Erro:</strong> As cores geradas ficavam distorcidas e o componente esquentava.</p>
-            <p><strong>Solução:</strong> O pino comum do LED havia sido ligado ao GND em vez de 5V (pois era de anodo comum). Corrigimos o barramento elétrico.</p>
+            <p><strong>Solução:</strong> O pino comum do LED havia sido ligado ao GND em vez de 5V (pois era de anodo
+              comum). Corrigimos o barramento elétrico.</p>
           </div>
 
           <div class="project-code">
@@ -187,15 +207,17 @@ void loop() {
 
           <div class="project-accessibility">
             <h4>Ideia de Protótipo Acessível:</h4>
-            <p>Associação de cada cor primária (R, G, B) a uma frequência de áudio única. Ao misturar as cores no LED, o circuito reproduz um acorde musical correspondente à cor combinada.</p>
+            <p>Associação de cada cor primária (R, G, B) a uma frequência de áudio única. Ao misturar as cores no LED, o
+              circuito reproduz um acorde musical correspondente à cor combinada.</p>
           </div>
         </article>
 
         <!-- Card 4: Arco-íris (Fita LED / Neopixel) -->
         <article class="project-card">
           <h3>4. Arco-íris com LED Endereçável</h3>
-          <p class="project-objective"><strong>Objetivo:</strong> Mapear e transicionar sequencialmente todo o espectro visível em uma fita de LEDs endereçáveis.</p>
-          
+          <p class="project-objective"><strong>Objetivo:</strong> Mapear e transicionar sequencialmente todo o espectro
+            visível em uma fita de LEDs endereçáveis.</p>
+
           <div class="project-components">
             <h4>Componentes Utilizados:</h4>
             <ul>
@@ -207,18 +229,20 @@ void loop() {
           </div>
 
           <div class="project-media">
-            <img src="arco-iris.jpg" alt="Fita de LEDs flexível exibindo uma transição contínua em gradiente com todas as cores do arco-íris.">
-           
-  <video controls width="100%" poster="capa-do-video.jpg">
-    <source src="midia/WhatsApp Video 2026-08-04 at 08.27.17.mp4" type="video/mp4">
-  </video>
-</div>
-      
+            <img src="arco-iris.jpg"
+              alt="Fita de LEDs flexível exibindo uma transição contínua em gradiente com todas as cores do arco-íris.">
+
+            <video controls width="100%" poster="capa-do-video.jpg">
+              <source src="midia/WhatsApp Video 2026-08-04 at 08.27.17.mp4" type="video/mp4">
+            </video>
+          </div>
+
 
           <div class="project-troubleshooting">
             <h4>Erros e Soluções:</h4>
             <p><strong>Erro:</strong> Os últimos LEDs da fita apresentavam oscilação de cor e tom avermelhado.</p>
-            <p><strong>Solução:</strong> A corrente fornecida pela porta USB do Arduino era insuficiente. Adicionamos uma fonte externa dedicada de 5V compartilhando o GND.</p>
+            <p><strong>Solução:</strong> A corrente fornecida pela porta USB do Arduino era insuficiente. Adicionamos
+              uma fonte externa dedicada de 5V compartilhando o GND.</p>
           </div>
 
           <div class="project-code">
@@ -236,15 +260,17 @@ void setup() {
 
           <div class="project-accessibility">
             <h4>Ideia de Protótipo Acessível:</h4>
-            <p>Construção de uma maquete tátil em relevo onde a posição do LED no gradiente corresponde a diferentes texturas físicas (de áspero a liso), associadas aos comprimentos de onda do espectro visível.</p>
+            <p>Construção de uma maquete tátil em relevo onde a posição do LED no gradiente corresponde a diferentes
+              texturas físicas (de áspero a liso), associadas aos comprimentos de onda do espectro visível.</p>
           </div>
         </article>
 
         <!-- Card 5: Semáforo Cruzamento -->
         <article class="project-card">
           <h3>5. Semáforo para Cruzamento</h3>
-          <p class="project-objective"><strong>Objetivo:</strong> Modelar o controle temporal de tráfego de um cruzamento rodoviário e pedestres priorizando a segurança transitória.</p>
-          
+          <p class="project-objective"><strong>Objetivo:</strong> Modelar o controle temporal de tráfego de um
+            cruzamento rodoviário e pedestres priorizando a segurança transitória.</p>
+
           <div class="project-components">
             <h4>Componentes Utilizados:</h4>
             <ul>
@@ -256,13 +282,16 @@ void setup() {
           </div>
 
           <div class="project-media">
-            <img src="semaforo.jpg" alt="Maquete de cruzamento viário em papelão com semáforos de LEDs acesos alternadamente.">
+            <img src="semaforo.jpg"
+              alt="Maquete de cruzamento viário em papelão com semáforos de LEDs acesos alternadamente.">
           </div>
 
           <div class="project-troubleshooting">
             <h4>Erros e Soluções:</h4>
-            <p><strong>Erro:</strong> Ambos os semáforos ficavam verdes ao mesmo tempo, gerando simulação de colisão.</p>
-            <p><strong>Solução:</strong> Reescrevemos a matriz de tempos do código utilizando variáveis claras de estado para garantir a intertrava do cruzamento.</p>
+            <p><strong>Erro:</strong> Ambos os semáforos ficavam verdes ao mesmo tempo, gerando simulação de colisão.
+            </p>
+            <p><strong>Solução:</strong> Reescrevemos a matriz de tempos do código utilizando variáveis claras de estado
+              para garantir a intertrava do cruzamento.</p>
           </div>
 
           <div class="project-code">
@@ -278,15 +307,17 @@ delay(2000);</code></pre>
 
           <div class="project-accessibility">
             <h4>Ideia de Protótipo Acessível:</h4>
-            <p>Implementação de aviso sonoro com cadência variável para travessia de pedestres cego(a)s (bipes rápidos para 'Siga' e lentos para 'Atenção') integrado a piso tátil na maquete.</p>
+            <p>Implementação de aviso sonoro com cadência variável para travessia de pedestres cego(a)s (bipes rápidos
+              para 'Siga' e lentos para 'Atenção') integrado a piso tátil na maquete.</p>
           </div>
         </article>
 
         <!-- Card 6: Sensor de Movimento -->
         <article class="project-card">
           <h3>6. Sensor de Movimento (PIR / Ultrassônico)</h3>
-          <p class="project-objective"><strong>Objetivo:</strong> Detectar presença ou variação de distância no ambiente e acionar alertas visuais e sonoros.</p>
-          
+          <p class="project-objective"><strong>Objetivo:</strong> Detectar presença ou variação de distância no ambiente
+            e acionar alertas visuais e sonoros.</p>
+
           <div class="project-components">
             <h4>Componentes Utilizados:</h4>
             <ul>
@@ -298,13 +329,15 @@ delay(2000);</code></pre>
           </div>
 
           <div class="project-media">
-            <img src="sensor-movimento.jpg" alt="Módulo sensor ultrassônico posicionado em protoboard apontado para a frente com fiação organizada.">
+            <img src="sensor-movimento.jpg"
+              alt="Módulo sensor ultrassônico posicionado em protoboard apontado para a frente com fiação organizada.">
           </div>
 
           <div class="project-troubleshooting">
             <h4>Erros e Soluções:</h4>
             <p><strong>Erro:</strong> O sensor retornava distâncias nulas ou leituras falsas constantes.</p>
-            <p><strong>Solução:</strong> Adicionamos um filtro de média móvel no código para ignorar ruídos e picos de leitura fora do alcance físico do sensor.</p>
+            <p><strong>Solução:</strong> Adicionamos um filtro de média móvel no código para ignorar ruídos e picos de
+              leitura fora do alcance físico do sensor.</p>
           </div>
 
           <div class="project-code">
@@ -321,7 +354,9 @@ distancia = duracao * 0.034 / 2;</code></pre>
 
           <div class="project-accessibility">
             <h4>Ideia de Protótipo Acessível:</h4>
-            <p>Desenvolvimento de um dispositivo vestível de auxílio à mobilidade (como uma bengala longa inteligente) que emite feedback tátil através de motor de vibração proporcional à proximidade de obstáculos aéreos ou frontais.</p>
+            <p>Desenvolvimento de um dispositivo vestível de auxílio à mobilidade (como uma bengala longa inteligente)
+              que emite feedback tátil através de motor de vibração proporcional à proximidade de obstáculos aéreos ou
+              frontais.</p>
           </div>
         </article>
 
@@ -337,4 +372,5 @@ distancia = duracao * 0.034 / 2;</code></pre>
 
   <script src="script.js"></script>
 </body>
+
 </html>
