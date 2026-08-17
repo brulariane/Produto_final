@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diário de Bordo: Robótica, Física e Tecnociência</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Atalho de acessibilidade para leitores de tela -->
+  <a href="#conteudo-principal" class="sr-only">Pular para o conteúdo principal</a>
+
+  <!-- Cabeçalho Principal -->
+  <header role="banner">
+    <div class="header-container">
+      <div class="site-titles">
+        <h1>Diário de Bordo</h1>
+        <p class="subtitle">Robótica, Física e Tecnociência</p>
+        <p class="student-info"><strong>Equipe:</strong> [Nome dos Alunos] | <strong>Turma:</strong> [Ano/Série]</p>
+      </div>
+
+      <!-- Barra de Ferramentas de Acessibilidade -->
+      <nav aria-label="Ferramentas de Acessibilidade" class="accessibility-toolbar">
+        <button id="btn-increase-font" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button id="btn-decrease-font" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button id="btn-toggle-contrast" aria-label="Alternar modo de alto contraste" aria-pressed="false">
+          Alto Contraste
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="conteudo-principal" tabindex="-1">
+
+    <!-- Seção 1: Introdução -->
+    <section aria-labelledby="intro-heading" class="intro-section">
+      <h2 id="intro-heading">Introdução e Objetivo Geral</h2>
+      <p>
+        Este diário de bordo documenta a jornada de investigação prática e teórica em Robótica, Física e Tecnociência, explorando a criação de protótipos interativos e soluções baseadas em tecnologia.
+      </p>
+
+      <article class="reflection-box">
+        <h3>Tecnologia, IA e a Visão Humana</h3>
+        <p>
+          <strong>Como a ciência, a tecnologia e a inteligência artificial podem contribuir para a melhoria da visão humana e para a acessibilidade visual?</strong>
+        </p>
+        <p>
+          A interseção entre física óptica, eletrônica e IA permite a criação de próteses visuais (como retinas artificiais), sistemas de computação gráfica voltados à ampliação adaptativa de contraste em tempo real e algoritmos de visão computacional capazes de descrever o ambiente e textos para pessoas com deficiência visual severa ou cegueira.
+        </p>
+      </article>
+    </section>
+
+    <!-- Seção 2: Projetos de Robótica -->
+    <section aria-labelledby="projects-heading" class="projects-section">
+      <h2 id="projects-heading">Projetos Desenvolvidos</h2>
+
+      <div class="projects-grid">
+
+        <!-- Card 1: Disco de Newton -->
+        <article class="project-card">
+          <h3>1. Disco de Newton</h3>
+          <p class="project-objective"><strong>Objetivo:</strong> Demonstrar a decomposição e a síntese da luz branca através da rotação de cores primárias e secundárias.</p>
+          
+          <div class="project-components">
+            <h4>Componentes Utilizados:</h4>
+            <ul>
+              <li>Motor DC 3V-6V</li>
+              <li>Disco impresso com o espectro visível</li>
+              <li>Bateria 9V e suporte</li>
+              <li>Interruptor simples</li>
+            </ul>
+          </div>
+
+          <div class="project-media">
+            <img src="disco-newton.jpg" alt="Disco com divisões coloridas do espectro visível acoplado a um pequeno motor elétrico sobre uma bancada.">
+          </div>
+
+          <div class="project-troubleshooting">
+            <h4>Erros e Soluções:</h4>
+            <p><strong>Erro:</strong> O disco trepidava excessivamente e a mistura de cores não ficava homogênea.</p>
+            <p><strong>Solução:</strong> Rebalanceamos o centro de massa do disco de papelão rígido e fixamos o eixo do motor com silicone denso.</p>
+          </div>
+
+          <div class="project-code">
+            <h4>Código / Esquemático:</h4>
+            <pre><code>// Circuito puramente elétrico acionado por interruptor físico.
+// Tensão: 5V DC | Corrente nominal: 150mA</code></pre>
+          </div>
+
+          <div class="project-accessibility">
+            <h4>Ideia de Protótipo Acessível:</h4>
+            <p>Adição de um sensor de velocidade (encoder) acoplado a um buzzer que emite um tom sonoro contínuo cuja frequência varia conforme a velocidade de rotação, permitindo que estudantes cego(a)s percebam auditivamente a aceleração do disco.</p>
+          </div>
+        </article>
+
+        <!-- Card 2: LED Fade-in / Fade-out -->
+        <article class="project-card">
+          <h3>2. LED Fade-in / Fade-out</h3>
+          <p class="project-objective"><strong>Objetivo:</strong> Controlar a intensidade luminosa de um LED gradualmente utilizando sinal PWM (Pulse Width Modulation).</p>
+          
+          <div class="project-components">
+            <h4>Componentes Utilizados:</h4>
+            <ul>
+              <li>Placa Arduino Uno</li>
+              <li>1 LED Difuso 5mm</li>
+              <li>1 Resistor 220Ω</li>
+              <li>Protoboard e Jumpers</li>
+            </ul>
+          </div>
+
+          <div class="project-media">
+            <img src="led-fade.jpg" alt="Protoboard conectada a um Arduino Uno com um LED vermelho aceso com brilho suave.">
+          </div>
+
+          <div class="project-troubleshooting">
+            <h4>Erros e Soluções:</h4>
+            <p><strong>Erro:</strong> O LED ligava e desligava abruptamente em vez de variar suavemente.</p>
+            <p><strong>Solução:</strong> O pino de saída foi alterado de um pino digital comum para um pino compatível com PWM (pino 9 com o símbolo ~).</p>
+          </div>
+
+          <div class="project-code">
+            <h4>Código Arduino (C++):</h4>
+            <pre><code>int led = 9;
+void setup() {
+  pinMode(led, OUTPUT);
+}
+void loop() {
+  for (int i = 0; i &lt;= 255; i += 5) {
+    analogWrite(led, i);
+    delay(30);
+  }
+  for (int i = 255; i &gt;= 0; i -= 5) {
+    analogWrite(led, i);
+    delay(30);
+  }
+}</code></pre>
+          </div>
+
+          <div class="project-accessibility">
+            <h4>Ideia de Protótipo Acessível:</h4>
+            <p>Sincronização do sinal PWM com um vibrador de celular (micro motor de tique haptic), permitindo que pessoas com deficiência visual e auditiva sintam a gradação da potência através da intensidade do estímulo tátil.</p>
+          </div>
+        </article>
+
+        <!-- Card 3: LED RGB -->
+        <article class="project-card">
+          <h3>3. LED RGB</h3>
+          <p class="project-objective"><strong>Objetivo:</strong> Misturar as três cores primárias da luz (Vermelho, Verde e Azul) para sintetizar cores secundárias e terciárias.</p>
+          
+          <div class="project-components">
+            <h4>Componentes Utilizados:</h4>
+            <ul>
+              <li>1 LED RGB Anodo Comum</li>
+              <li>3 Resistores 220Ω</li>
+              <li>3 Potenciômetros de 10kΩ</li>
+              <li>Placa Arduino Uno</li>
+            </ul>
+          </div>
+
+          <div class="project-media">
+            <img src="led-rgb.jpg" alt="LED RGB aceso em tom ciano montado na protoboard ao lado de três potenciômetros de controle.">
+          </div>
+
+          <div class="project-troubleshooting">
+            <h4>Erros e Soluções:</h4>
+            <p><strong>Erro:</strong> As cores geradas ficavam distorcidas e o componente esquentava.</p>
+            <p><strong>Solução:</strong> O pino comum do LED havia sido ligado ao GND em vez de 5V (pois era de anodo comum). Corrigimos o barramento elétrico.</p>
+          </div>
+
+          <div class="project-code">
+            <h4>Código Arduino (C++):</h4>
+            <pre><code>const int pR = 9, pG = 10, pB = 11;
+void setup() {
+  pinMode(pR, OUTPUT);
+  pinMode(pG, OUTPUT);
+  pinMode(pB, OUTPUT);
+}
+void loop() {
+  // Exemplo de cor Magenta (R + B)
+  analogWrite(pR, 0);   // Anodo Comum: 0 ativa
+  analogWrite(pG, 255); // 255 desativa
+  analogWrite(pB, 0);
+}</code></pre>
+          </div>
+
+          <div class="project-accessibility">
+            <h4>Ideia de Protótipo Acessível:</h4>
+            <p>Associação de cada cor primária (R, G, B) a uma frequência de áudio única. Ao misturar as cores no LED, o circuito reproduz um acorde musical correspondente à cor combinada.</p>
+          </div>
+        </article>
+
+        <!-- Card 4: Arco-íris (Fita LED / Neopixel) -->
+        <article class="project-card">
+          <h3>4. Arco-íris com LED Endereçável</h3>
+          <p class="project-objective"><strong>Objetivo:</strong> Mapear e transicionar sequencialmente todo o espectro visível em uma fita de LEDs endereçáveis.</p>
+          
+          <div class="project-components">
+            <h4>Componentes Utilizados:</h4>
+            <ul>
+              <li>Módulo de LED Endereçável WS2812B</li>
+              <li>1 Capacímetro / Resistor de proteção 470Ω</li>
+              <li>Fonte externa 5V 2A</li>
+              <li>Placa Arduino Uno</li>
+            </ul>
+          </div>
+
+          <div class="project-media">
+            <img src="arco-iris.jpg" alt="Fita de LEDs flexível exibindo uma transição contínua em gradiente com todas as cores do arco-íris.">
+          </div>
+
+          <div class="project-troubleshooting">
+            <h4>Erros e Soluções:</h4>
+            <p><strong>Erro:</strong> Os últimos LEDs da fita apresentavam oscilação de cor e tom avermelhado.</p>
+            <p><strong>Solução:</strong> A corrente fornecida pela porta USB do Arduino era insuficiente. Adicionamos uma fonte externa dedicada de 5V compartilhando o GND.</p>
+          </div>
+
+          <div class="project-code">
+            <h4>Código Arduino (C++):</h4>
+            <pre><code>#include &lt;Adafruit_NeoPixel.h&gt;
+#define PIN 6
+#define NUMPIXELS 8
+Adafruit_NeoPixel strip(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+  strip.begin();
+  strip.show();
+}</code></pre>
+          </div>
+
+          <div class="project-accessibility">
+            <h4>Ideia de Protótipo Acessível:</h4>
+            <p>Construção de uma maquete tátil em relevo onde a posição do LED no gradiente corresponde a diferentes texturas físicas (de áspero a liso), associadas aos comprimentos de onda do espectro visível.</p>
+          </div>
+        </article>
+
+        <!-- Card 5: Semáforo Cruzamento -->
+        <article class="project-card">
+          <h3>5. Semáforo para Cruzamento</h3>
+          <p class="project-objective"><strong>Objetivo:</strong> Modelar o controle temporal de tráfego de um cruzamento rodoviário e pedestres priorizando a segurança transitória.</p>
+          
+          <div class="project-components">
+            <h4>Componentes Utilizados:</h4>
+            <ul>
+              <li>6 LEDs (2 Vermelhos, 2 Amarelos, 2 Verdes)</li>
+              <li>6 Resistores 220Ω</li>
+              <li>1 Buzzer Passivo</li>
+              <li>Placa Arduino Uno</li>
+            </ul>
+          </div>
+
+          <div class="project-media">
+            <img src="semaforo.jpg" alt="Maquete de cruzamento viário em papelão com semáforos de LEDs acesos alternadamente.">
+          </div>
+
+          <div class="project-troubleshooting">
+            <h4>Erros e Soluções:</h4>
+            <p><strong>Erro:</strong> Ambos os semáforos ficavam verdes ao mesmo tempo, gerando simulação de colisão.</p>
+            <p><strong>Solução:</strong> Reescrevemos a matriz de tempos do código utilizando variáveis claras de estado para garantir a intertrava do cruzamento.</p>
+          </div>
+
+          <div class="project-code">
+            <h4>Código Arduino (C++):</h4>
+            <pre><code>// Trecho de alternância do semáforo
+digitalWrite(vA, HIGH); 
+digitalWrite(vmB, HIGH);
+delay(5000);
+digitalWrite(vA, LOW);
+digitalWrite(amA, HIGH);
+delay(2000);</code></pre>
+          </div>
+
+          <div class="project-accessibility">
+            <h4>Ideia de Protótipo Acessível:</h4>
+            <p>Implementação de aviso sonoro com cadência variável para travessia de pedestres cego(a)s (bipes rápidos para 'Siga' e lentos para 'Atenção') integrado a piso tátil na maquete.</p>
+          </div>
+        </article>
+
+        <!-- Card 6: Sensor de Movimento -->
+        <article class="project-card">
+          <h3>6. Sensor de Movimento (PIR / Ultrassônico)</h3>
+          <p class="project-objective"><strong>Objetivo:</strong> Detectar presença ou variação de distância no ambiente e acionar alertas visuais e sonoros.</p>
+          
+          <div class="project-components">
+            <h4>Componentes Utilizados:</h4>
+            <ul>
+              <li>Sensor Ultrassônico HC-SR04 ou PIR</li>
+              <li>1 Buzzer Ativo</li>
+              <li>1 LED Indicador</li>
+              <li>Placa Arduino Uno</li>
+            </ul>
+          </div>
+
+          <div class="project-media">
+            <img src="sensor-movimento.jpg" alt="Módulo sensor ultrassônico posicionado em protoboard apontado para a frente com fiação organizada.">
+          </div>
+
+          <div class="project-troubleshooting">
+            <h4>Erros e Soluções:</h4>
+            <p><strong>Erro:</strong> O sensor retornava distâncias nulas ou leituras falsas constantes.</p>
+            <p><strong>Solução:</strong> Adicionamos um filtro de média móvel no código para ignorar ruídos e picos de leitura fora do alcance físico do sensor.</p>
+          </div>
+
+          <div class="project-code">
+            <h4>Código Arduino (C++):</h4>
+            <pre><code>long duracao;
+int distancia;
+digitalWrite(trigPin, LOW);
+delayMicroseconds(2);
+digitalWrite(trigPin, HIGH);
+delayMicroseconds(10);
+duracao = pulseIn(echoPin, HIGH);
+distancia = duracao * 0.034 / 2;</code></pre>
+          </div>
+
+          <div class="project-accessibility">
+            <h4>Ideia de Protótipo Acessível:</h4>
+            <p>Desenvolvimento de um dispositivo vestível de auxílio à mobilidade (como uma bengala longa inteligente) que emite feedback tátil através de motor de vibração proporcional à proximidade de obstáculos aéreos ou frontais.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer role="contentinfo">
+    <p>&copy; 2026 - Diário de Bordo Acadêmico. Desenvolvido para fins educacionais seguindo os padrões WCAG.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
